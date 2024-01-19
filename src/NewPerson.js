@@ -32,7 +32,7 @@ const NewPerson = () => {
               <p style={{margin:'3vw'}}>Age</p>
               <p style={{margin:'3vw'}}>Actions</p>
             </div>
-            <div onClick={addHtml} style={{position:'absolute',bottom:'1vh',right:'1vh', backgroundColor:'#4472C4',textAlign:'center',color:'white',border:'none',padding:'1.5vh 3vh',borderRadius:'4px',maxWidth:'80px'}}>Add</div>
+            <div onClick={()=>{<NewEntry saveData={()=>{return (<NewPerson/>)}}/>}} style={{position:'absolute',bottom:'1vh',right:'1vh', backgroundColor:'#4472C4',textAlign:'center',color:'white',border:'none',padding:'1.5vh 3vh',borderRadius:'4px',maxWidth:'80px'}}>Add</div>
           
                         {/* on mouse click this component is added */}
             <div ref={addDetails}></div>
@@ -49,7 +49,7 @@ const NewPerson = () => {
               </div>
               <br></br>
             </div> */}
-            <NewEntry saveData={saveData}/>
+            <NewEntry saveData={()=>{return (<NewPerson/>)}}/>
 
           </div>
     </div>
