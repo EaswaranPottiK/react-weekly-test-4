@@ -13,8 +13,8 @@ function App() {
       </header>
       <div style={{marginTop:'3vh',padding:'0 3vw'}}>
           <div>
-            <button style={{backgroundColor:'#4472C4',color:'white',border:'none',padding:'1.5vh 3vh',borderRadius:'4px'}}>Add New Person</button>
-            <button style={{marginLeft:'6vw',backgroundColor:'#4472C4',color:'white',border:'none',padding:'1.5vh 3vh',borderRadius:'4px'}}>Retrive Information</button>
+            <button onClick={()=>setAddNewPerson(true)} style={{backgroundColor:'#4472C4',color:'white',border:'none',padding:'1.5vh 3vh',borderRadius:'4px'}}>Add New Person</button>
+            <button onClick={()=>setAddNewPerson(false)} style={{marginLeft:'6vw',backgroundColor:'#4472C4',color:'white',border:'none',padding:'1.5vh 3vh',borderRadius:'4px'}}>Retrive Information</button>
           </div>
 
           {addNewPerson ? <NewPerson />:<RetriveInformation/>}

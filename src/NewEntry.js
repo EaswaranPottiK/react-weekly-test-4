@@ -10,10 +10,11 @@ const NewEntry = (props) => {
           <div style={{display:'flex',justifyContent:'space-around'}}>
             <input style={{minWidth:'15vw'}} type='text' placeholder='Name'></input>
             <input type='date' ></input>
-            <input type='number' placeholder='Aadhar Number'></input>
-            <input type='number' placeholder='Mobile Number'></input>
+            <input type='number' minLength="3" required placeholder='Aadhar Number-12 digits'></input>
+            <input type='number' placeholder='Mobile Number-10 digits'></input>
             <input type='text' disabled></input>
-            <button onClick={(e)=>props.saveData(e)}>Save</button>
+            <button onClick={(e)=>{props.deleteData(e)}}>Delete</button>
+            <button onClick={(e)=>{props.saveData(e); }}>Save</button>
           </div>
           <br></br>
         </div>
